@@ -55,7 +55,7 @@ internal final class TMBarButtonStateController: TMBarButtonController {
         targetButton?.selectionState = .from(rawValue: directionalProgress)
         
         let progressComplement = 1.0 - directionalProgress
-        if progressComplement < 0.001 { // e - 0.001
+        if progressComplement < 0.01 { // e - 0.01
             self.selectedButton = targetButton
         }
         
